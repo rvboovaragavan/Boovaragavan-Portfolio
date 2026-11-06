@@ -41,7 +41,7 @@ export const About: React.FC = () => {
 
             <div className="p-5 sm:p-7 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-white/[0.09] via-white/[0.03] to-black border border-white/20 backdrop-blur-xl shadow-2xl space-y-3.5 sm:space-y-4 relative overflow-hidden before:absolute before:top-0 before:left-0 before:right-0 before:h-[1px] before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent">
               <p>
-                I have hands-on experience with <span className="text-white font-bold px-2.5 py-1 rounded-lg bg-white/[0.08] border border-white/20">Raspberry Pi</span>, <span className="text-white font-bold px-2.5 py-1 rounded-lg bg-white/[0.08] border border-white/20">Arduino</span>, <span className="text-white font-bold px-2.5 py-1 rounded-lg bg-white/[0.08] border border-white/20">ESP32</span>, and <span className="text-white font-bold px-2.5 py-1 rounded-lg bg-white/[0.08] border border-white/20">NodeMCU</span>, along with programming expertise in <span className="text-amber-300 font-bold">Java, Python, and SQL</span>.
+                I have hands-on experience with <span className="text-amber-300 font-bold">Raspberry Pi</span>, <span className="text-amber-300 font-bold">Arduino</span>, <span className="text-amber-300 font-bold">ESP32</span>, and <span className="text-amber-300 font-bold">NodeMCU</span>, along with programming expertise in <span className="text-amber-300 font-bold">Java, Python, and SQL</span>.
               </p>
 
               <p>

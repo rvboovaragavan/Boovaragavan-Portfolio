@@ -83,31 +83,20 @@ export const Hero: React.FC = () => {
             </span>
           </div>
 
-          {/* DEDICATED MOBILE & TABLET PORTRAIT (Hidden on Desktop 'lg') */}
-          <div className="lg:hidden w-full flex justify-center items-center my-3 sm:my-5">
-            <div className="relative group">
-              {/* Outer Ambient Glow */}
-              <div className="absolute -inset-2 bg-gradient-to-r from-amber-400/20 via-white/20 to-amber-400/20 rounded-3xl blur-xl opacity-75 pointer-events-none" />
-              
-              {/* Glassmorphic Portrait Container */}
-              <div className="relative w-48 h-60 xs:w-52 xs:h-64 sm:w-64 sm:h-76 rounded-3xl p-1 bg-gradient-to-b from-white/40 via-white/10 to-transparent shadow-[0_0_35px_rgba(255,255,255,0.15)]">
-                <div className="w-full h-full rounded-[22px] overflow-hidden bg-gradient-to-b from-slate-900/95 via-black/90 to-black relative flex items-end justify-center">
-                  {/* Subtle inner grid & spotlight */}
-                  <div className="absolute inset-0 bg-grid-subtle opacity-30 pointer-events-none" />
-                  <div className="absolute top-0 inset-x-0 h-28 bg-gradient-to-b from-white/15 to-transparent pointer-events-none" />
-                  
-                  {/* Portrait Photo */}
-                  <img
-                    src="/hero-portrait-blend.png"
-                    alt={profileData.name}
-                    className="w-full h-full object-cover object-top select-none drop-shadow-2xl"
-                    loading="eager"
-                  />
-                  
-                  {/* Soft bottom blend to match container */}
-                  <div className="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-black via-black/40 to-transparent pointer-events-none" />
-                </div>
-              </div>
+          {/* Mobile Suit Portrait - Exactly same cutout style as desktop (Seamless, No outer card/box) */}
+          <div className="lg:hidden w-full flex justify-center items-end my-4 sm:my-6 relative">
+            {/* Ambient soft backlight so the dark suit silhouette stands out against black background */}
+            <div className="absolute w-56 h-56 sm:w-72 sm:h-72 bg-white/[0.08] rounded-full blur-3xl pointer-events-none" />
+            
+            <div className="relative w-auto max-w-[280px] xs:max-w-[320px] sm:max-w-[380px] flex justify-center overflow-hidden">
+              <img
+                src="/hero-portrait-blend.png"
+                alt={profileData.name}
+                className="w-auto h-full max-h-[50vh] sm:max-h-[60vh] object-contain object-bottom select-none drop-shadow-[0_20px_50px_rgba(0,0,0,0.95)]"
+                loading="eager"
+              />
+              {/* Soft bottom blend into next section - exactly matching desktop */}
+              <div className="absolute inset-x-0 bottom-0 h-20 sm:h-24 bg-gradient-to-t from-black to-transparent pointer-events-none" />
             </div>
           </div>
 
