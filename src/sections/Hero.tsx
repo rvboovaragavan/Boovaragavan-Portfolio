@@ -53,20 +53,19 @@ export const Hero: React.FC = () => {
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1000px] lg:w-[1300px] h-[220px] sm:h-[320px] bg-gradient-to-t from-white/[0.14] via-white/[0.04] to-transparent rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-[550px] sm:w-[850px] h-[160px] sm:h-[220px] bg-white/[0.06] rounded-full blur-[90px] pointer-events-none" />
 
-      {/* FULL-WINDOW SUIT PHOTO: Optimized for both mobile and desktop views */}
-      <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[50%] xl:w-[48%] h-full flex items-start sm:items-end justify-center lg:justify-end pointer-events-none z-10 overflow-hidden">
+      {/* DESKTOP FULL-HEIGHT SUIT PHOTO (Right Side, Desktop Only) */}
+      <div className="hidden lg:flex absolute right-0 top-0 bottom-0 lg:w-[50%] xl:w-[48%] h-full items-end justify-end pointer-events-none z-10 overflow-hidden">
         <img
           src="/hero-portrait-blend.png"
           alt={profileData.name}
-          className="h-full max-h-[65vh] sm:max-h-[85vh] lg:max-h-[94vh] w-auto object-contain object-top sm:object-bottom opacity-45 sm:opacity-75 lg:opacity-100 select-none drop-shadow-[0_20px_50px_rgba(0,0,0,0.95)]"
+          className="h-full max-h-[94vh] w-auto object-contain object-bottom select-none drop-shadow-[0_20px_50px_rgba(0,0,0,0.95)]"
+          loading="eager"
         />
-        {/* Soft edge blend gradients for seamless background integration on mobile and desktop */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/85 to-black/20 lg:hidden pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/75 to-transparent lg:hidden pointer-events-none" />
+        {/* Soft bottom blend into next section */}
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black to-transparent pointer-events-none" />
       </div>
 
-      {/* CONTENT WRITTEN DIRECTLY OVER THE IMAGE */}
+      {/* CONTENT */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-20">
         <div className="max-w-2xl lg:max-w-3xl flex flex-col items-start text-left">
           
@@ -82,6 +81,34 @@ export const Hero: React.FC = () => {
               <MapPin className="w-3 h-3 text-amber-400/80" />
               {profileData.location}
             </span>
+          </div>
+
+          {/* DEDICATED MOBILE & TABLET PORTRAIT (Hidden on Desktop 'lg') */}
+          <div className="lg:hidden w-full flex justify-center items-center my-3 sm:my-5">
+            <div className="relative group">
+              {/* Outer Ambient Glow */}
+              <div className="absolute -inset-2 bg-gradient-to-r from-amber-400/20 via-white/20 to-amber-400/20 rounded-3xl blur-xl opacity-75 pointer-events-none" />
+              
+              {/* Glassmorphic Portrait Container */}
+              <div className="relative w-48 h-60 xs:w-52 xs:h-64 sm:w-64 sm:h-76 rounded-3xl p-1 bg-gradient-to-b from-white/40 via-white/10 to-transparent shadow-[0_0_35px_rgba(255,255,255,0.15)]">
+                <div className="w-full h-full rounded-[22px] overflow-hidden bg-gradient-to-b from-slate-900/95 via-black/90 to-black relative flex items-end justify-center">
+                  {/* Subtle inner grid & spotlight */}
+                  <div className="absolute inset-0 bg-grid-subtle opacity-30 pointer-events-none" />
+                  <div className="absolute top-0 inset-x-0 h-28 bg-gradient-to-b from-white/15 to-transparent pointer-events-none" />
+                  
+                  {/* Portrait Photo */}
+                  <img
+                    src="/hero-portrait-blend.png"
+                    alt={profileData.name}
+                    className="w-full h-full object-cover object-top select-none drop-shadow-2xl"
+                    loading="eager"
+                  />
+                  
+                  {/* Soft bottom blend to match container */}
+                  <div className="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-black via-black/40 to-transparent pointer-events-none" />
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Hello, It's Me */}
