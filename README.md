@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Boovaragavan R V — Personal Developer Portfolio
 
 A developer portfolio website designed for **Boovaragavan R V**, representing his background as an **Electronics & Communication Engineering student**, **Software Developer**, **Embedded Systems & IoT Enthusiast**, and **AI-Assisted Web Development Learner**.
@@ -153,3 +154,7 @@ Open `src/data/certifications.ts`:
 1. Go to [netlify.com](https://netlify.com).
 2. Drag and drop the `dist/` folder into Netlify Drop, or connect your GitHub repository.
 3. Live instantly.
+=======
+# boovaragavan-portfolio
+Personal portfolio of an ECE student passionate about software development, embedded systems, IoT, and AI. Showcases my technical skills, projects, internship experience, certifications, and achievements. Built with React, Vite, TypeScript, Tailwind CSS, and Firebase.
+>>>>>>> 96a3f71c47f049dc9b6dfe2a9390e8a9c35a9907
